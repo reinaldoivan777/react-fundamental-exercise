@@ -1,0 +1,34 @@
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@16.13.1/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+  <script type="text/babel">
+    // WITH SPECIAL React Fragment syntax
+    const element = (
+      <>
+        <span>Hello</span> <span>World</span>
+      </>
+    );
+
+    // WITH React Fragment basic syntax
+    // const element = (
+    //   <React.Fragment>
+    //     <span>Hello</span> <span>World</span>
+    //   </React.Fragment>
+    // );
+
+    // THE HARD WAY
+
+    // const helloElement = React.createElement("span", null, "Hello");
+    // const worldElement = React.createElement("span", null, "World");
+    // const element = React.createElement(
+    //   React.Fragment,
+    //   null,
+    //   helloElement,
+    //   " ",
+    //   worldElement
+    // );
+    ReactDOM.render(element, document.getElementById("root"));
+  </script>
+</body>
